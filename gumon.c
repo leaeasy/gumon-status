@@ -427,7 +427,6 @@ int main(void){
 
   static int i,j,SS;
   static struct CpuLoad data_cpus_load[LEN(cpus_load)];
-  static float data_cpus_freq[LEN(cpus_freq)];
   static struct NetInfo data_netIFS[LEN(netIFS)];
   static struct MemInfo data_mem;
   static float data_temps[LEN(temperatures)];
@@ -474,13 +473,6 @@ static struct VolumeInfo data_volume;
 	for(i=0;i<LEN(cpus_load);i++){
 	  SetCpuLoad(cpus_load[i],&data_cpus_load[i]);
 	  fprintf(stdout,cpusf_load[i][ThresSelect(data_cpus_load[i].loadavg*100.,cpusthres_load[i])],100.*data_cpus_load[i].loadavg);
-	}
-	break;
-
-      case Pcpufreq:
-	for(i=0;i<LEN(cpus_freq);i++){
-	  SetCpuFreq(cpus_freq[i],&data_cpus_freq[i]);
-	  fprintf(stdout,cpusf_freq[i][ThresSelect(data_cpus_freq[i],cpusthres_freq[i])],data_cpus_freq[i]);
 	}
 	break;
 
