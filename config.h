@@ -9,14 +9,14 @@
 
 /*CPUs*/
 static const char *cpus_load[] = {"cpu"}; /*cpus in /proc/cpustats to monitor*/
-static const char *cpusf_load[][3] = { {"^fg(#222222)^bg(#228b22)   ^fg(#FFFFFF)^bg(#228b22)   ^fg(#FFFFFF)%3.0f %% ^bg()^fg(#228b22)^bg(#C5C1AA)   ",           
-                   "^fg(#222222)^bg(#FFB917)   ^fg(#FFFFFF)^bg(#FFB917)   ^fg(#FFFFFF)%3.0f %% ^bg()^fg(#FFB917)^bg(#C5C1AA)   ", 
-                   "^fg(#222222)^bg(#FF1778)   ^fg(#FFFFFF)^bg(#FF1778)   ^fg(#FFFFFF)%3.0f %% ^bg()^fg(#FF1778)^bg(#C5C1AA)   ", 
+static const char *cpusf_load[][3] = { {"^fg(#222222)^bg(#228b22)    ^fg(#FFFFFF)^bg(#228b22)   ^fg(#FFFFFF)%3.0f %% ^bg()^fg(#228b22)^bg(#C5C1AA)    ",           
+                   "^fg(#222222)^bg(#FFB917)    ^fg(#FFFFFF)^bg(#FFB917)   ^fg(#FFFFFF)%3.0f %% ^bg()^fg(#FFB917)^bg(#C5C1AA)    ", 
+                   "^fg(#222222)^bg(#FF1778)    ^fg(#FFFFFF)^bg(#FF1778)   ^fg(#FFFFFF)%3.0f %% ^bg()^fg(#FF1778)^bg(#C5C1AA)    ", 
 				   }}; /*CPUs format [Low,Norm,High]*/
 static const float cpusthres_load[][2] = { {25.,75.} };
 
 /*MEM&SWAP*/
-static const char memf[] = "^fg(#4D4D4D)   ^fg(#545454)%.1f  %.0lfMB  ^fg(#C5C1AA)^bg(#657b82)   "; /*Memory format*/
+static const char memf[] = "^fg(#4D4D4D)   ^fg(#545454)%.1f  %.0lfMB  ^fg(#C5C1AA)^bg(#657b82)    "; /*Memory format*/
 
 /*Network*/
 static const char *netIFS[] = {"wlp6s0","enp8s0"}; /*Network IFs to monitor, will be shown only if connected*/
@@ -58,9 +58,9 @@ static const char timef[] = " ^fg(#3399FF)  ^fg(#FF1778)%a %d/%m/%y ^fg(#228B
 /*Temperature reading*/
 static const char *temperatures[] = {"temp2_input"}; /*files in /sys/devices/platform/coretemp.0/ to monitor*/
 static const char *temperaturesf[][3] = { 
-					  {"^fg(#C5C1AA)^bg(#228B22)   ^fg(#FFFFFF) ^fg(#FFFFFF)%.0f°  ",
-					   "^fg(#C5C1AA)^bg(#FFB917)   ^fg(#FFFFFF) ^bg(#FFB917)^fg(#FFFFFF)%.0f°  ",
-					   "^fg(#C5C1AA)^bg(#FF1778)   ^fg(#FFFFFF) ^bg(#FF1778)^fg(#FFFFFF)%.0f°  "} }; /*Temps format*/
+					  {"^fg(#C5C1AA)^bg(#228B22)    ^fg(#FFFFFF) ^fg(#FFFFFF)%.0f°  ",
+					   "^fg(#C5C1AA)^bg(#FFB917)    ^fg(#FFFFFF) ^bg(#FFB917)^fg(#FFFFFF)%.0f°  ",
+					   "^fg(#C5C1AA)^bg(#FF1778)    ^fg(#FFFFFF) ^bg(#FF1778)^fg(#FFFFFF)%.0f°  "} }; /*Temps format*/
 
 static const float temperaturesthres[][2] = { {60.,90.}, /*Temps thresholds in degrees celsius*/
 					      };
