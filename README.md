@@ -4,6 +4,10 @@ crowbar MMXII
 
 A simple Linux system  monitor written in C for bar, dzen2, etc..
 
+Fork by leaeasy.
+remove MPD support.
+fix display with statusbar fonts.
+
 Configuration
 -------------
 All the configuration is done in the config.h file.
